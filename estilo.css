@@ -1,0 +1,149 @@
+* {
+    font-family: 'Sen', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	 
+	background-image: url("eldenring2.jpg") ;
+	background-repeat: no-repeat ;
+	background-size: cover;
+	background-attachment: fixed;
+					
+}
+
+.box {
+	display: grid;
+	margin: 20px;
+	top: 20px;
+	grid-template: repeat(auto-fill,min(250px, 1fr));
+	grid-gap: 20px;
+	justify-content: center;
+
+
+}
+.box img {
+	
+    width: 95vw;
+    height: 30vw;
+
+
+
+}
+
+.texto {
+	text-shadow: 2px 3px 10px ;
+}
+
+  h1 {
+	font-weight: 400;
+	text-align: center;
+	padding: 20px 0;
+    font-size: 40px;
+	color: #951414;
+
+	
+}
+
+.linia {
+	background: #951414;
+	height: 10px;
+	width: 100%;
+	display: block;
+
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.grid-container > a{
+	display: block;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 8px rgba(3, 4, 1, .7); 
+}
+
+.grid-container img{
+	width: 100%;
+	vertical-align: top;
+	height: 300px;
+	object-fit: cover;
+	transition: transform 0.5s;
+
+}
+
+.grid-container a:hover img{
+	filter: blur(3px);
+	transform: rotate(10deg) scale(1.4);
+}
+
+.light-box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0,.5);
+	transition: transform .3s ease-in-out;
+	width: 100%;
+	height: 100vh;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0);
+}
+
+.light-box img {
+	width: 75vw;
+	max-height: 70vh;
+}
+
+.light-box:target {
+	transform: scale(1);
+}
+.close {
+	display: block;
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	background: #851919;
+	color: #fff;
+	text-decoration: none;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+}
+
+.next {
+	display: block;
+	background: #851919;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+   
+}
+@media screen and (max-width:400px){
+	.grid-container {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+	}
+.close {
+	top: 20px;
+	right: 20px;
+}
+}
+
+
+
